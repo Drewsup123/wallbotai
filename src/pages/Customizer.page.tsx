@@ -1,3 +1,11 @@
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useSnapshot } from "valtio/react";
+import config from "../config/config";
+import store from "../store";
+import { downloadCanvasToImage, reader } from "../config/helpers";
+import { EditorTabs, FilterTabs, DecalTypes } from "../config/constants";
+
 const Customizer = () => {
     return (
         <div>

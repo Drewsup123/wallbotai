@@ -9,6 +9,7 @@ import {
 import { useSnapshot } from "valtio/react";
 import store from "../store";
 import ButtonComponent from "../components/Button.component";
+import LogoSm from "../assets/logo_sm.png";
 
 const Home = () => {
     const snap = useSnapshot(store);
@@ -17,7 +18,7 @@ const Home = () => {
             {snap.intro && (
                 <motion.section className="home" {...slideAnimation("left")}>
                     <motion.header {...slideAnimation("down")}>
-                        <img src="" alt="logo" />
+                        <img src={LogoSm} alt="logo" />
                     </motion.header>
                     <motion.div
                         className="home-content"
