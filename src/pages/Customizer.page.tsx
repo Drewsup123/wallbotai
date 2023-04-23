@@ -6,11 +6,18 @@ import store from "../store";
 import { downloadCanvasToImage, reader } from "../config/helpers";
 import { EditorTabs, FilterTabs, DecalTypes } from "../config/constants";
 import { fadeAnimation, slideAnimation } from "../config/motion";
+
 const Customizer = () => {
+    const snap = useSnapshot(store);
     return (
-        <div>
-            <h1>Customizer</h1>
-        </div>
+        <AnimatePresence>
+            {!snap.intro && (
+                <motion.section
+                    className="customizer"
+                    {...fadeAnimation}
+                ></motion.section>
+            )}
+        </AnimatePresence>
     );
 };
 
