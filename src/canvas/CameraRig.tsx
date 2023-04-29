@@ -12,14 +12,14 @@ const CameraRig = (props: any) => {
         const isBreakpoint = window.innerWidth <= 1260;
         const isMobile = window.innerWidth <= 768;
         //? Setting initial postion
-        let targetPosition: any = [0, 0, 0];
-        if (snap.intro) {
-            if (isBreakpoint) {
-                targetPosition = [0, 0, 0];
-            } else if (isMobile) {
-                targetPosition = [0, 0.2, 2.5];
-            }
-        }
+        let targetPosition: any = [0, 0, 5];
+        // if (snap.intro) {
+        //     if (isBreakpoint) {
+        //         targetPosition = [0, 0, 0];
+        //     } else if (isMobile) {
+        //         targetPosition = [0, 0.2, 2.5];
+        //     }
+        // }
         easing.damp3(state.camera.position, targetPosition, 0.25, delta);
         easing.dampE(
             group.current.rotation,
