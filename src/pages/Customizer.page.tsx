@@ -21,6 +21,7 @@ const Customizer = () => {
                     <motion.div
                         key="custom"
                         className="customizer position-absolute top-0 start-0"
+                        style={{ zIndex: 5 }}
                         {...slideAnimation("left")}
                     >
                         <div className="d-flex align-items-center vh-100">
@@ -37,6 +38,7 @@ const Customizer = () => {
                     </motion.div>
                     <motion.div
                         className="position-absolute top-0 right-0 end-0"
+                        style={{ zIndex: 5 }}
                         {...slideAnimation("down")}
                     >
                         <ButtonComponent
@@ -50,6 +52,7 @@ const Customizer = () => {
                     </motion.div>
                     <motion.div
                         className="filterTabsContainer position-absolute bottom-0 start-50 translate-middle-x"
+                        style={{ zIndex: 5 }}
                         {...slideAnimation("up")}
                     >
                         {FilterTabs.map((tab, index) => (
