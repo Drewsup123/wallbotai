@@ -13,6 +13,11 @@ import LogoSm from "../assets/logo_sm.png";
 
 const Home = () => {
     const snap = useSnapshot(store);
+
+    const handleCreate = () => {
+        store.intro = false;
+    };
+
     return (
         <AnimatePresence>
             {snap.intro && (
@@ -35,7 +40,9 @@ const Home = () => {
                                 Create your own wall art with our customizer!
                                 You can also generate AI art!
                             </p>
-                            <ButtonComponent id="view" />
+                            <ButtonComponent id="view" onClick={handleCreate}>
+                                Create!
+                            </ButtonComponent>
                         </motion.div>
                     </motion.div>
                 </motion.section>
