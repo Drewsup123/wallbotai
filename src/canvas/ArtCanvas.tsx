@@ -9,6 +9,7 @@ const ArtCanvas = () => {
     const snap = useSnapshot(store);
     // @ts-ignore
     const { nodes, materials } = useGLTF("/canvas_model.glb");
+    // const { nodes, materials } = useGLTF("/shirt_baked.glb");
 
     // const logoTexture = useTexture(snap.logoDecal);
     // const fullTexture = useTexture(snap.fullDecal);
@@ -18,7 +19,9 @@ const ArtCanvas = () => {
             <mesh
                 castShadow
                 geometry={nodes.model_js.geometry}
+                // geometry={nodes.T_Shirt_male.geometry}
                 material={materials.b0b0b0}
+                // material={materials.lambert1}
                 material-roughness={1}
                 dispose={null}
             ></mesh>
